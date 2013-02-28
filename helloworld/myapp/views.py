@@ -3,6 +3,7 @@ from django.template import RequestContext, loader
 from django.http import HttpResponseServerError
 import traceback
 import sys
+## Want the RED/GREEN in realtime ###
 
 def index(request):
 	return render_to_response('index.html',{'text_test': 'Hello World'})
@@ -14,5 +15,5 @@ def this_server_error(request, template_name='500.html'):
 	t = loader.get_template(template_name)
 	ltype,lvalue,ltraceback = sys.exc_info()
 	sys.exc_clear()
-	return HttpResponseServerError(t.render(RequestContext({'type':lvalue,'traceback':ltraceback})))
+	return HttpResponseServerError(t.render(RequestcdContext({'type':lvalue,'traceback':ltraceback})))
 
