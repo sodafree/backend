@@ -4,6 +4,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
+handler500 = 'myapp.views.this_server_error'
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'helloworld.views.home', name='home'),
