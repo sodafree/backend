@@ -3,7 +3,7 @@ from django.template import RequestContext, loader
 from django.http import HttpResponseServerError
 import traceback
 import sys
-## Want the RED/GREEN in realtime ###
+## Want the RED/GREEN in realtime ### CHAn
 
 def index(request):
 	return render_to_response('index.html',{'text_test': 'Hello World'})
